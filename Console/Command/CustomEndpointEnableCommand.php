@@ -62,21 +62,10 @@ class CustomEndpointEnableCommand extends \Symfony\Component\Console\Command\Com
                 return 1;
             }
 
-            $targetRegion = $this->getTargetConfigSetting('region', $config, $input);
-            if (!$targetRegion) {
-                $output->writeln('<error>Please provide a region for the S3-compatible endpoint.</error>');
-
-                return 1;
-            }
-
             $output->writeln(sprintf('Updating configuration to use %s as the default endpoint.', $targetEndpoint));
 
             if ($targetEndpoint) {
                 $config->setDataByPath('thai_s3/custom_endpoint/endpoint', $targetEndpoint);
-                $config->save();
-            }
-            if ($targetRegion) {
-                $config->setDataByPath('thai_s3/custom_endpoint/region', $targetRegion);
                 $config->save();
             }
             $config->setDataByPath('thai_s3/custom_endpoint/enabled', 1);
@@ -95,8 +84,6 @@ class CustomEndpointEnableCommand extends \Symfony\Component\Console\Command\Com
         return [
             new InputOption('endpoint', null, InputOption::VALUE_OPTIONAL,
                 'an S3-compatible endpoint, e.g. https://nyc3.digitaloceanspaces.com'),
-            new InputOption('region', null, InputOption::VALUE_OPTIONAL,
-                'a third-party region for the S3-compatible endpoint, e.g. nyc3'),
         ];
     }
 

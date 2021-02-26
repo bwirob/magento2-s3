@@ -84,10 +84,6 @@ class StorageExportCommand extends Command
                 if ($this->helper->getEndpoint()) {
                     $options['endpoint'] = $this->helper->getEndpoint();
                 }
-
-                if ($this->helper->getEndpointRegion()) {
-                    $options['region'] = $this->helper->getEndpointRegion();
-                }
             }
 
             try {

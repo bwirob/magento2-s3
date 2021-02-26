@@ -88,10 +88,6 @@ class StorageEnableCommand extends Command
                     if ($this->helper->getEndpoint()) {
                         $options['endpoint'] = $this->helper->getEndpoint();
                     }
-
-                    if ($this->helper->getEndpointRegion()) {
-                        $options['region'] = $this->helper->getEndpointRegion();
-                    }
                 }
 
                 $client = new \Aws\S3\S3Client($options);

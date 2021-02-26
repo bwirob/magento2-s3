@@ -32,14 +32,6 @@ class Data extends AbstractHelper
     /**
      * @return string
      */
-    public function getRegion()
-    {
-        return $this->scopeConfig->getValue('thai_s3/general/region');
-    }
-
-    /**
-     * @return string
-     */
     public function getEndpointEnabled()
     {
         return $this->scopeConfig->getValue('thai_s3/custom_endpoint/enabled');
@@ -51,14 +43,6 @@ class Data extends AbstractHelper
     public function getEndpoint()
     {
         return $this->scopeConfig->getValue('thai_s3/custom_endpoint/endpoint');
-    }
-
-    /**
-     * @return string
-     */
-    public function getEndpointRegion()
-    {
-        return $this->scopeConfig->getValue('thai_s3/custom_endpoint/region');
     }
 
     /**
