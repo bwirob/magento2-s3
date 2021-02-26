@@ -1,14 +1,14 @@
 <?php
-namespace Thai\S3\Model\Store\Store;
+namespace Thai\S3\Plugin;
 
 use Magento\Store\Model\Store;
 
 /**
- * Plugin fot Store.
+ * Plugin for Store.
  *
  * @see Store
  */
-class Plugin
+class FixBaseUrlDoubleSlashIssue
 {
     /**
      * This plugin fixes a bug where Magento incorrectly appends two forward

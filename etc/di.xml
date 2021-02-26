@@ -44,7 +44,7 @@
         </arguments>
     </type>
     <type name="Magento\Store\Model\Store">
-        <plugin name="thai_s3_model_store_store_plugin" type="Thai\S3\Model\Store\Store\Plugin" />
+        <plugin name="fix_base_url_double_slash_issue" type="Thai\S3\Plugin\FixBaseUrlDoubleSlashIssue" />
     </type>
     <type name="Magento\Swatches\Helper\Media">
         <plugin name="thai_s3_helper_swatches_media_plugin" type="Thai\S3\Helper\Swatches\Media\Plugin" />
