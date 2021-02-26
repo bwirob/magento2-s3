@@ -23,7 +23,7 @@
         <plugin name="thai_s3_helper_mediastorage_file_storage_database_plugin" type="Thai\S3\Helper\MediaStorage\File\Storage\Database\Plugin" />
     </type>
     <type name="Magento\MediaStorage\Model\Config\Source\Storage\Media\Storage">
-        <plugin name="thai_s3_model_mediastorage_config_source_storage_media_storage_plugin" type="Thai\S3\Model\MediaStorage\Config\Source\Storage\Media\Storage\Plugin" />
+        <plugin name="add_s3_to_media_storage_options" type="Thai\S3\Plugin\AddS3ToMediaStorageOptions" />
     </type>
     <type name="Magento\MediaStorage\Model\File\Storage">
         <plugin name="thai_s3_model_mediastorage_file_storage_plugin" type="Thai\S3\Model\MediaStorage\File\Storage\Plugin" />
